@@ -4,6 +4,7 @@
 }
 html, body {
     height: 100%;
+    font-family: sans-serif;
 }
 .flex-layout {
     display: flex;
@@ -51,5 +52,69 @@ header.flex-element {
     color: #F44336;
     text-decoration: none;
     font-size: 18px;
-    font-family: sans-serif;
+}
+.timetable {
+    list-style: none;
+}
+.timetable__section {
+    list-style: none;
+}
+.timetable__label {
+    font-weight: 700;
+    line-height: 50px;
+    border: 2px solid rgba(255, 193, 7, 0.5);
+    padding-left: 50px;
+    font-size: 20px;
+    display: block;
+}
+.timetable__label:hover {
+    border: 2px solid rgba(255, 193, 7, 0.9);
+}
+.timetable__child-section {
+    list-style: none;
+}
+.timetable-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:     30px;
+}
+.timetable-item__logo {
+    height: 50px;
+}
+.timetable-item__label {
+    font-size: 25px
+}
+.timetable-item__author {
+    font-size: 15px;
+}
+.timetable-item__author:hover + .author {
+    display: block;
+}
+.timetable-item__date-hide {
+    display: none;
+}
+.timetable-item__video {
+    color: #F44336;
+    text-decoration: none;
+    max-width: 80px;
+    text-align: center;
+}
+.past {
+    color: #9E9E9E;
+}
+.author {
+    width: 400px;
+    display: none;
+    position: fixed;
+    left: 10%;
+}
+.author__photo {
+    width: inherit;
+}
+.author__description {
+    text-align: justify;
+    background-color: #E0E0E0;
+    margin-top: -5px;
+    padding: 10px;
 }
