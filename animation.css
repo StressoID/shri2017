@@ -1,0 +1,12 @@
+ @keyframes show-author {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.author {
+    animation: show-author 0.3s   ;
+}

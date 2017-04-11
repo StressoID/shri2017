@@ -1,5 +1,20 @@
 @media screen and (max-width: 600px) {
-    .menu__link {
-        font-size: 14px;
+    .menu {
+        align-items: center;
+        flex-direction: column;
+    }
+    .timetable-item__label {
+        padding-right: 25px;
+    }
+    .timetable-item__author {
+        padding-right: 25px;
+    }
+    .timetable__label {
+        padding-left: 20px;
+    }
+    .author {
+        top: 0;
+        left: 0;
+        width: 100%;
     }
 }
