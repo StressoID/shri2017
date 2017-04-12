@@ -20,44 +20,46 @@ html, body {
 main.flex-element {
     flex: 1 1 auto;
 }
-header.flex-element {
-    flex: 0 0 10%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-.menu {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    list-style: none;
-    max-height: 100%;
-}
-.menu__item {
-    max-width: 200px;
+.menu-item {
+    max-width: 280px;
     min-width: 200px;
     border: 2px solid rgba(255, 235, 238, 0.9);
     cursor: pointer;
     max-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 15px 12px;
+    display: inline-block;
+    margin: 15px 0px;
     text-align: center;
-    padding: 5px 0;
-    margin: 5px 0;
 }
-.menu__item:hover {
+.menu__checkbox {
+    display: none;
+}
+input[type=checkbox]:checked + .menu-item {
+     border: 2px solid rgba(244, 67, 54, 0.8);
+}
+input#sdi:checked ~ .timetable .sdi {
+ display: none;
+ opacity: 1;
+}
+
+input#smd:checked ~ .timetable .smd {
+ display: none;
+ opacity: 1;
+}
+
+input#sd:checked ~ .timetable .sd {
+ display: none;
+ opacity: 1;
+}
+.menu-item:hover {
     border: 2px solid rgba(244, 67, 54, 0.8);
-}
-.menu__link {
-    color: #F44336;
-    text-decoration: none;
-    font-size: 18px;
 }
 .timetable {
     list-style: none;
 }
 .timetable__section {
     list-style: none;
+    opacity: 1;
 }
 .timetable__label {
     font-weight: 700;
@@ -87,8 +89,12 @@ header.flex-element {
 }
 .timetable-item__author {
     font-size: 15px;
+    cursor: default;
 }
-.timetable-item__author:hover + .author {
+.timetable-item__author:hover {
+    color: #F44336;
+}
+.timetable-item__author:hover > .author {
     display: block;
     opacity: 1;
 }
@@ -100,6 +106,14 @@ header.flex-element {
     text-decoration: none;
     max-width: 80px;
     text-align: center;
+    font-size: 15px;
+}
+.timetable-item__date {
+    text-align: center;
+    font-size: 14px;
+}
+.timetable-item__place {
+    display: block;
 }
 .past {
     color: #9E9E9E;
@@ -109,11 +123,16 @@ header.flex-element {
 попап покывается средствами CSS
 */
 .author { 
-    width: 300px;
+        width: 400px;
+    height: 200px;
     display: none;
-    position: fixed;
-    right: 0;
     opacity: 0;
+    background: #000;
+    position: fixed;
+    top: 50%;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -390px;
 }
 .author__photo {
     width: inherit;
@@ -124,4 +143,5 @@ header.flex-element {
     margin-top: -5px;
     padding: 10px;
     color: black;
+    font-size: 12px;
 }

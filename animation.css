@@ -1,4 +1,4 @@
- @keyframes show-author {
+ @keyframes show-block {
     from {
         opacity: 0;
     }
@@ -7,6 +7,19 @@
     }
 }
 
+@keyframes hide-block {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 .author {
-    animation: show-author 0.3s   ;
+    animation: show-block 0.3s;
+}
+
+.timetable__section {
+    animation: show-block 0.3s;
 }
