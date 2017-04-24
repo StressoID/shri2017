@@ -20,6 +20,7 @@ html, body {
 }
 main.flex-element {
     flex: 1 1 auto;
+    text-align: center;
 }
 .menu-item {
     max-width: 280px;
@@ -69,6 +70,7 @@ input#sd:checked ~ .timetable .sd {
     padding-left: 50px;
     font-size: 20px;
     display: block;
+    text-align: left;
 }
 .timetable__label:hover {
     border: 2px solid rgba(255, 193, 7, 0.9);
